@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><Device-Configuration xmlns="urn:cisco:xml-pi">
+<version><Param>16.9</Param></version>
+<service><timestamps><debug><datetime><msec/></datetime></debug></timestamps></service>
+<service><timestamps><log><datetime><msec/></datetime></log></timestamps></service>
+<platform><qfp><utilization><monitor><load><LoadWarmingThreasholdDefaultValue80>80</LoadWarmingThreasholdDefaultValue80></load></monitor></utilization></qfp></platform>
+<platform operation="delete" ><punt-keepalive><disable-kernel-core/></punt-keepalive></platform>
+<platform><console><virtual/></console></platform>
+<hostname><SystemNetworkName>CSR1kv</SystemNetworkName></hostname>
+<boot-start-marker></boot-start-marker>
+<boot-end-marker></boot-end-marker>
+<aaa operation="delete" ><new-model/></aaa>
+<ip><domain><name><DefaultDomainName>example.netacad.com</DefaultDomainName></name></domain></ip>
+<login><on-success><log/></on-success></login>
+<subscriber><templating/></subscriber>
+<multilink><bundle-name><authenticated/></bundle-name></multilink>
+<crypto><pki><trustpoint><CAServerName>TP-self-signed-1677805175</CAServerName>
+<CaTrustpoint-Configuration>
+<enrollment><selfsigned/></enrollment>
+<subject-name><SubjectName>cn=IOS-Self-Signed-Certificate-1677805175</SubjectName></subject-name>
+<revocation-check><none/></revocation-check>
+<rsakeypair><RSAKeypairLabel>TP-self-signed-1677805175</RSAKeypairLabel></rsakeypair>
+</CaTrustpoint-Configuration>
+</trustpoint>
+</pki>
+</crypto>
+<crypto><pki><certificate><chain><CAServerName>TP-self-signed-1677805175</CAServerName>
+<ConfigCertChain-Configuration>
+<certificate><self-signed><CertificateSerialNumber>01</CertificateSerialNumber></self-signed></certificate>
+<X-Interface>  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 </X-Interface>
+<X-Interface>  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 </X-Interface>
+<X-Interface>  69666963 6174652D 31363737 38303531 3735301E 170D3231 30393139 31303039 </X-Interface>
+<X-Interface>  35355A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 </X-Interface>
+<X-Interface>  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 36373738 </X-Interface>
+<X-Interface>  30353137 35308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 </X-Interface>
+<X-Interface>  0A028201 01009D4F 7C37C8CE E39ECF92 7B8B4DFF E0EC31C7 E2901BAA 37686B0C </X-Interface>
+<X-Interface>  106F9956 3C9688EF 319C7915 D1697006 D70C6793 3B41DDFA 518C9649 D9206FCD </X-Interface>
+<X-Interface>  4D179C49 09C6FD77 04E6F87E 77ED5E76 0641103F 216ECA6A 83077EC0 43F1C523 </X-Interface>
+<X-Interface>  93955D7F 28427B14 327D15FF B2442CC5 45A798E0 E34B38CB FAFBF687 9BCFEF45 </X-Interface>
+<X-Interface>  20DA4D32 1EA2346C F91BDBE8 96C7C6DF 1E6F9557 28BF97BB 1A633FB0 0DA6755D </X-Interface>
+<X-Interface>  E4B36ED3 56D591A7 D69B632D 11232AEB 2DAADD40 792EAB43 E9ED56D8 7876C45F </X-Interface>
+<X-Interface>  8DA87ABF 3DBF48BD EBEEAD5C 600DCDD8 0E8F2F68 EC41BD9D B701EB43 A9D2160E </X-Interface>
+<X-Interface>  F520673A 6714AF12 F5EB5B5F EABEFF44 3AD849DD D1635F8E B56A4E9F FA3DDAF3 </X-Interface>
+<X-Interface>  78B45F8E 6C0F0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF </X-Interface>
+<X-Interface>  301F0603 551D2304 18301680 1428494A 1E224C0A 6117C50B B77799D9 38A084E9 </X-Interface>
+<X-Interface>  39301D06 03551D0E 04160414 28494A1E 224C0A61 17C50BB7 7799D938 A084E939 </X-Interface>
+<X-Interface>  300D0609 2A864886 F70D0101 05050003 82010100 180580D8 66D47DA9 4CD8C51B </X-Interface>
+<X-Interface>  E07790F4 EA28E32A 4E1C454E 3B8FAF06 CF3EA680 75494558 E3928C2C E4DBFE11 </X-Interface>
+<X-Interface>  65AEE77F 0C65AEC1 A1EC14D5 9DC59AD4 975EDF27 0B69464C EE749ABB 04FBA040 </X-Interface>
+<X-Interface>  0792CC0C 0C4C1192 6B13260A 4725006C F67A7A50 E5F30F04 10315EDC AACE7B77 </X-Interface>
+<X-Interface>  5D87C5F4 A67B9D5D 91656304 82DACE54 CA1AA730 78EA5E4E EBE0BDD6 8CB49726 </X-Interface>
+<X-Interface>  B45062EB 00F4DA05 83F1996E 7C19E77D 7E425644 2816073C B227B022 08C90806 </X-Interface>
+<X-Interface>  999D3A19 2B3A88EB F5495478 99A287FF EAA95CB3 AA03D1E9 B400C011 31C7E992 </X-Interface>
+<X-Interface>  7CBAEA2F EE9EA7E6 FD6FDD4F 22863CD7 65BFDF96 4A4F71D5 FE405F9A 4D9843D5 </X-Interface>
+<X-Interface>  A2AAC142 118FE636 1CF0C7BF 46D91806 A400967B</X-Interface>
+<X-Interface>  	quit</X-Interface>
+</ConfigCertChain-Configuration>
+</chain>
+</certificate>
+</pki>
+</crypto>
+<license><udi><pid><PidString>CSR1000V</PidString><sn><SnString>99NLTH95FDM</SnString></sn></pid></udi></license>
+<license operation="delete" ><smart><enable/></smart></license>
+<diagnostic><bootup><level><minimal/></level></bootup></diagnostic>
+<spanning-tree><extend><system-id/></extend></spanning-tree>
+<netconf-yang></netconf-yang>
+<restconf></restconf>
+<username><UserName>cisco</UserName><privilege><UserPrivilegeLevel>15</UserPrivilegeLevel><password><_0><UnencryptedUserPassword>cisco123!</UnencryptedUserPassword></_0></password></privilege></username>
+<redundancy>
+<ConfigRed-Configuration>
+</ConfigRed-Configuration>
+</redundancy>
+<lldp><run/></lldp>
+<interface><Param>Loopback1</Param>
+<ConfigIf-Configuration>
+<ip><address><IPAddress>172.16.10.100</IPAddress><IPSubnetMask>255.255.255.255</IPSubnetMask></address></ip>
+<ip><helper-address><IPDestinationAddress>10.10.10.12</IPDestinationAddress></helper-address></ip>
+<ip><access-group><IPACLStandardExtended>1</IPACLStandardExtended><in/></access-group></ip>
+<ip><access-group><IPACLStandardExtended>1</IPACLStandardExtended><out/></access-group></ip>
+</ConfigIf-Configuration>
+</interface>
+<interface><Param>Loopback2</Param>
+<ConfigIf-Configuration>
+<ip><address><IPAddress>12.46.44.12</IPAddress><IPSubnetMask>255.255.255.0</IPSubnetMask></address></ip>
+</ConfigIf-Configuration>
+</interface>
+<interface><Param>GigabitEthernet1</Param>
+<ConfigIf-Configuration>
+<description><UpTo200CharactersInterface>IPv6 ADDRESS</UpTo200CharactersInterface></description>
+<ip><address><dhcp/></address></ip>
+<ip><access-group><IPACLStandardExtended>2</IPACLStandardExtended><in/></access-group></ip>
+<ip><access-group><IPACLStandardExtended>2</IPACLStandardExtended><out/></access-group></ip>
+<negotiation><auto/></negotiation>
+<ipv6><address><IPv6LinkLocalAddress>FE80::1:1</IPv6LinkLocalAddress><link-local/></address></ipv6>
+<ipv6><address><IPv6Prefix>2001:DB8:ACAD:1::1/64</IPv6Prefix></address></ipv6>
+<mop operation="delete" ><enabled/></mop>
+<mop operation="delete" ><sysid/></mop>
+</ConfigIf-Configuration>
+</interface>
+<router><ospf>
+<ConfigRouter-Configuration>
+<network><NetworkNumber>0.0.0.0</NetworkNumber><OSPFWildCardBits>255.255.255.255</OSPFWildCardBits><area><OSPFAreaIDAsDecimalValue>0</OSPFAreaIDAsDecimalValue></area></network>
+</ConfigRouter-Configuration>
+</ospf>
+</router>
+<router><ospf>
+<ConfigRouter-Configuration>
+<router-id><OSPFRouterIDIPAddressFormat>2.2.2.2</OSPFRouterIDIPAddressFormat></router-id>
+<domain-id><OSPFDomainIDIPAddressFormat>1.1.1.1</OSPFDomainIDIPAddressFormat></domain-id>
+<domain-id><OSPFDomainIDIPAddressFormat>2.2.2.2</OSPFDomainIDIPAddressFormat><secondary/></domain-id>
+<event-log><size><NumberEvents>100</NumberEvents></size></event-log>
+<ttl-security><all-interfaces><hops><MaxNumberHopsAllowed>10</MaxNumberHopsAllowed></hops></all-interfaces></ttl-security>
+<passive-interface><Param>Loopback1</Param></passive-interface>
+<passive-interface><Param>Loopback2</Param></passive-interface>
+<network><NetworkNumber>10.10.0.0</NetworkNumber><OSPFWildCardBits>0.0.0.255</OSPFWildCardBits><area><OSPFAreaIDAsDecimalValue>0</OSPFAreaIDAsDecimalValue></area></network>
+<network><NetworkNumber>60.70.80.0</NetworkNumber><OSPFWildCardBits>0.0.0.127</OSPFWildCardBits><area><OSPFAreaIDAsDecimalValue>1</OSPFAreaIDAsDecimalValue></area></network>
+<default-information><originate><metric><OSPFMetric>135</OSPFMetric></metric></originate></default-information>
+</ConfigRouter-Configuration>
+</ospf>
+</router>
+<ip><forward-protocol><nd/></forward-protocol></ip>
+<ip operation="delete" ><http><server/></http></ip>
+<ip><http><authentication><local/></authentication></http></ip>
+<ip><http><secure-server/></http></ip>
+<ip><nat><pool><PoolName>NAT_POOL</PoolName><StartIPAddress>2.3.4.0</StartIPAddress><EndIPAddress>2.3.4.2</EndIPAddress><netmask><NetworkMask>255.255.255.252</NetworkMask><type><match-host/></type></netmask></pool></nat></ip>
+<ip><nat><inside><source><static><InsideLocalIPAddress>10.0.0.1</InsideLocalIPAddress><InsideGlobalIPAddress>2.2.2.2</InsideGlobalIPAddress></static></source></inside></nat></ip>
+<access-list><IPStandardACL>1</IPStandardACL><permit><AddressToMatch>4.5.6.0</AddressToMatch><log/></permit></access-list>
+<access-list><IPStandardACL>1</IPStandardACL><permit><any/></permit></access-list>
+<access-list><IPStandardACL>2</IPStandardACL><permit><AddressToMatch>0.0.0.0</AddressToMatch><WildcardBits>255.255.255.252</WildcardBits><log/></permit></access-list>
+<access-list><IPStandardACL>2</IPStandardACL><permit><any/></permit></access-list>
+<control-plane></control-plane>
+<banner><motd><CBannerTextCDelimitingCharacter>^C</CBannerTextCDelimitingCharacter></motd></banner>
+<X-Interface>*                                           *</X-Interface>
+<X-Interface>**                                         **</X-Interface>
+<X-Interface>***                                       ***</X-Interface>
+<X-Interface>***  Cisco Networking Academy             ***</X-Interface>
+<X-Interface>***                                       ***</X-Interface>
+<X-Interface>***  This software is provided for        ***</X-Interface>
+<X-Interface>***   Educational Purposes                ***</X-Interface>
+<X-Interface>***    Only in Networking Academies       ***</X-Interface>
+<X-Interface>***                                       ***</X-Interface>
+<X-Interface>**                                         **</X-Interface>
+<X-Interface>*                                           *</X-Interface>
+<X-Interface>^C</X-Interface>
+<line><LineNumber>con 0</LineNumber>
+<ConfigLine-Configuration>
+<X-Interface> logging synchronous</X-Interface>
+<stopbits><_1/></stopbits>
+</ConfigLine-Configuration>
+</line>
+<line><LineNumber>vty 0 4</LineNumber>
+<ConfigLine-Configuration>
+<X-Interface> login local</X-Interface>
+<X-Interface> transport input ssh</X-Interface>
+</ConfigLine-Configuration>
+</line>
+<line><LineNumber>vty 5 15</LineNumber>
+<ConfigLine-Configuration>
+<X-Interface> login local</X-Interface>
+<X-Interface> transport input ssh</X-Interface>
+</ConfigLine-Configuration>
+</line>
+<end></end>
+</Device-Configuration>

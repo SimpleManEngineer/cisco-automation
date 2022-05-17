@@ -1,0 +1,104 @@
+---
+- name: GET IOS CONFIG
+  hosts: 
+    - CSR1kv
+  gather_facts: false
+
+  vars:
+    ansible_network_os: cisco.ios.ios
+    ansible_connection: ansible.netcommon.network_cli
+
+  tasks: 
+
+    - name: SHOW ACCESS LISTS
+      ios_command:
+        commands:
+          - show access-lists
+      register: access_lists
+
+    - name: SHOW INTERFACES
+      ios_command:
+        commands:
+          - show interfaces
+      register: interfaces
+
+    - name: SHOW IP INTERFACES
+      ios_command:
+        commands:
+          - show ip interface
+      register: ip_interfaces
+
+    - name: SHOW ETHERCHANNELS SUMMARY
+      ios_command:
+        commands:
+          - show etherchannel summary
+      register: ether_channels
+
+    - name: SHOW OSPF CONFIG
+      ios_command:
+        commands:
+          - show running-config | section ospf
+      register: ospf_runningconfig
+
+    - name: SHOW NAT TRANSLATIONS
+      ios_command:
+        commands:
+          - show ip nat translations
+      register: nat_translations
+
+    - name: SHOW ROUTING TABLE
+      ios_command:
+        commands:
+          - show ip route
+      register: routing_table
+
+    - name: SHOW RUNNING CONFIG
+      ios_command:
+        commands:
+          - show running-config | format
+      register: running_config
+
+#----------------OUTPUTS#----------------
+
+    - name: SAVE ACCESS LISTS TO ./outputs/
+      copy:
+        content: "{{ access_lists.stdout[0] }}"
+        dest: "./outputs/show_access_lists.txt"
+
+    - name: SAVE INTERFACES TO ./outputs/
+      copy:
+        content: "{{ interfaces.stdout[0] }}"
+        dest: "./outputs/show_interfaces.txt"
+
+    - name: SAVE IP INTERFACES TO ./outputs/
+      copy:
+        content: "{{ ip_interfaces.stdout[0] }}"
+        dest: "./outputs/show_ip_interface.txt"
+
+    - name: SAVE OSPF CONFIG TO ./outputs/
+      copy:
+        content: "{{ ospf_runningconfig.stdout[0] }}"
+        dest: "./outputs/ospf_runningconfig.txt"
+
+    - name: SAVE ETHERCHANNELS TO ./outputs/
+      copy:
+        content: "{{ ether_channels.stdout[0] }}"
+        dest: "./outputs/show_etherchannel_summary.txt"
+
+    - name: SAVE NAT TRANSLATIONS TO ./outputs/
+      copy:
+        content: "{{ nat_translations.stdout[0] }}"
+        dest: "./outputs/show_ip_nat_translations.txt"
+
+    - name: SAVE ROUTING TABLE TO ./outputs/
+      copy:
+        content: "{{ routing_table.stdout[0] }}"
+        dest: "./outputs/show_ip_route.txt"
+
+    - name: SAVE RUNNING CONFIG TO ./outputs/
+      copy:
+        content: "{{ running_config.stdout[0] }}"
+        dest: "./outputs/show_running_config.xml"
+
+
+

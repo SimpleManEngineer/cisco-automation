@@ -1,0 +1,15 @@
+OSPF Router with ID (2.2.2.2) (Process ID 2)
+
+            OSPF Router with ID (172.16.10.100) (Process ID 1)
+
+		Router Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+172.16.1.100    172.16.1.100    848         0x8000004B 0x0084DC 2         
+172.16.2.100    172.16.2.100    877         0x80000030 0x00CBAC 2         
+172.16.10.100   172.16.10.100   864         0x80000035 0x002B33 2         
+
+		Net Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.56.101  172.16.10.100   864         0x8000001B 0x00B4C4

@@ -1,0 +1,28 @@
+{
+    "process-id": "",
+    "router-id": "",
+    "networks":
+                [
+                    {
+                        "network": ""
+                    }
+                ],
+    "default-info-originate": "",
+    "domain-ids":
+                [
+                    {
+                        "domain": ""
+                    }
+                ],
+    "domain tag": "",
+    "event-log-size": "",
+    "auto-cost": "",
+    "passive-intf":
+                [
+                    {
+                        "intf": ""
+                    }
+                ],
+    "redistribution-mode": "",
+    "ttl-security-check": ""
+}
